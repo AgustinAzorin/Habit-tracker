@@ -29,4 +29,5 @@
        }
    });
 
+   console.log('Body recibido:', req.body);
    module.exports = router;

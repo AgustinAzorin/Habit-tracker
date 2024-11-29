@@ -27,14 +27,16 @@
            <div>
                <h1>Mis Hábitos</h1>
                <form onSubmit={addHabit}>
-                   <input
-                       type="text"
-                       value={habitName}
-                       onChange={(e) => setHabitName(e.target.value)}
-                       placeholder="Agregar un nuevo hábito"
-                   />
-                   <button type="submit">Agregar</button>
-               </form>
+                <input
+                    type="text"
+                    id="habitName" // Agregar un id
+                    name="habitName" // Agregar un name
+                    value={habitName}
+                    onChange={(e) => setHabitName(e.target.value)}
+                    laceholder="Agregar un nuevo hábito"
+                 />
+                <button type="submit">Agregar</button>
+                </form>
                <ul>
                    {habits.map(habit => (
                        <li key={habit._id}>{habit.name}</li>

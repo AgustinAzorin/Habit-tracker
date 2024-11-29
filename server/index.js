@@ -13,7 +13,7 @@
    // Conectar a MongoDB
     mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
        .then(() => console.log('MongoDB conectado'))
-       .catch(err => console.log(err));
+       .catch(err => console.log('Error al conectar con MongoDB:', err));
     
     const habitRoutes = require('./routes/habits');
 
